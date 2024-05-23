@@ -12,37 +12,38 @@ import Person from '../models/Person'
 </div> */}
 
 const Home = () => {
+  const [currentStage, setCurrentStage] = useState(1);
   const [isRotating, setIsRotating] = useState(false);
 
-  const adjustIslandForScreenSize = () => { 
-    let screenScale = null;
-    let screenPosition = [0, -2.5, -43];
-    let rotation = [0.1, 4.7, -0.1];
+  const adjustIslandForScreenSize = () => {
+    let screenScale, screenPosition;
 
-    if(window.innerWidth < 768) {
-      screenScale = [2.5, 2.5, 2.5];
+    if (window.innerWidth < 768) {
+      screenScale = [3, 3, 3];
+      screenPosition = [0, -6.5, -43.4];
     } else {
-      screenScale = [4.9, 4.9, 4.9];
+      screenScale = [5, 5, 5];
+      screenPosition = [1, -4.5, -43.4];
     }
 
-    return [screenScale, screenPosition, rotation]
-  }
+    return [screenScale, screenPosition];
+  };
 
   const adjustCharacterForScreenSize = () => { 
     let screenScale, screenPosition;
 
     if(window.innerWidth < 768) {
-      screenScale = [1.5, 1.5, 1.5];
-      screenPosition = [0, -1.5, 0];
+      screenScale = [0.33, 0.33, 0.33];
+      screenPosition = [-0.7, -1.4, -1.8];
     } else {
-      screenScale = [3, 3, 3];
-      screenPosition = [0, -4, 0];
+      screenScale = [1, 1, 1];
+      screenPosition = [-1.9, -2, -3.9]; //x y z
     }
 
     return [screenScale, screenPosition]
   }
 
-  const [islandScale, islandPosition, islandRotation] = adjustIslandForScreenSize();
+  const [islandScale, islandPosition] = adjustIslandForScreenSize();
   const [charScale, charPosition] = adjustCharacterForScreenSize();
 
   return (
@@ -58,20 +59,22 @@ const Home = () => {
           <spotLight/> */}
           <hemisphereLight skyColor='#b1e1ff' groundColor='#000000' intensity={2}/>
 
-          <Sky />
+          <Sky isRotating={isRotating}/>
+          
           <Person
             isRotating={isRotating}
-            charScale={charScale}
-            charPosition={charPosition}
-            rotation={[0, 20, 20]}
+            scale={charScale}
+            position={charPosition}
+            rotation={[0, 20.2, 6.5]}
             />
 
           <Island
             position={islandPosition}
             scale={islandScale}
-            rotation={islandRotation}
+            setCurrentStage={setCurrentStage}
             isRotating={isRotating}
             setIsRotating={setIsRotating}
+            rotation={[0.1, 4.7077, 0]}
             />
         </Suspense>
 
