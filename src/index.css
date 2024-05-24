@@ -12,6 +12,20 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Couture';
+  src: url('./fonts/couture-bld.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cocogoose';
+  src: url('./fonts/Cocogoose-Pro-Regular-trial.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --blue-rgb: 237 245 255;
   --green-rgb: 125 161 35;
@@ -35,12 +49,13 @@ body:has(.card[data-color="green"]:hover) {
 }
 
 @layer utilities {
+
   .max-container {
     @apply max-w-5xl mx-auto sm:p-16 pb-12 !pt-[126px] px-8 min-h-[calc(100vh-80px)];
   }
 
   .head-text {
-    @apply sm:text-5xl text-3xl font-semibold sm:leading-snug font-poppins;
+    @apply sm:text-5xl text-3xl font-semibold sm:leading-snug font-cocogoose;
   }
 
   .subhead-text {

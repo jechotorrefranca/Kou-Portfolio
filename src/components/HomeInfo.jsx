@@ -1,12 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 const InfoBox = ({ text, link, btnText }) => (
     <div className='info-box'>
-        <p className='font-thin sm:text-2xl text-center'>{text}</p>
+        <p className='font-semi sm:text-2xl text-center font-sans'>{text}</p>
 
         <Link to={link} className='neo-brutalism-white neo-btn'>
-            {btnText}
+            <p className='font-sans font-bold text-neutral-900'>{btnText}</p>
+            
+            <FontAwesomeIcon icon={faArrowRight} color='#171717'/>
         </Link>
     </div>
 )
@@ -16,16 +20,16 @@ const renderContent = {
         <InfoBox
             text="These comprise the compilations of my completed projects."
             link='/projects'
-            btnText='See Projects'/>
+            btnText='View Projects'/>
     ), 
 
     2: (
         <InfoBox
             text={
                 <>
-                Interested in contacting me? .
+                Interested in contacting me?
                 <br />
-                Please click the button below.
+                Click the button below!
                 </>
                 }
             link='/contact'
@@ -38,7 +42,7 @@ const renderContent = {
             <>
                 Hello! I am Jecho P. Torrefranca, a Computer Science student.
                 <br />
-                To learn more about me, please click the button below.
+                To learn more about me, click the button below!
             </>
             }
             link='/about'
