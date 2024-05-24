@@ -35,10 +35,6 @@ body {
   font-family: "Big Noodle Titling", sans-serif;
 }
 
-.nav-link {
-  font-size: 30px;
-}
-
 
 body:has(.card[data-color="blue"]:hover) {
   background-color: rgb(var(--blue-rgb) / 25%);
@@ -49,6 +45,12 @@ body:has(.card[data-color="green"]:hover) {
 }
 
 @layer utilities {
+
+  
+.nav-link {
+  @apply text-2xl sm:text-4xl
+}
+
 
   .max-container {
     @apply max-w-5xl mx-auto sm:p-16 pb-12 !pt-[126px] px-8 min-h-[calc(100vh-80px)];

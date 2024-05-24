@@ -5,7 +5,7 @@ import { Home, About, Projects, Contact } from "./pages"
 
 const App = () => {
   return (
-    <main className="bg-blue-100">
+    <main style={{backgroundColor: '#00060c'}}>
       <Router>
 
         {/* navbar component */}

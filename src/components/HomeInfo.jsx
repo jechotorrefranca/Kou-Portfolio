@@ -5,7 +5,7 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 const InfoBox = ({ text, link, btnText }) => (
     <div className='info-box'>
-        <p className='font-semi sm:text-2xl text-center font-sans'>{text}</p>
+        <p className='font-semi sm:text-xl text-center font-sans'>{text}</p>
 
         <Link to={link} className='neo-brutalism-white neo-btn'>
             <p className='font-sans font-bold text-neutral-900'>{btnText}</p>

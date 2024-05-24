@@ -6,11 +6,11 @@ const Navbar = () => {
 
     <header className="header">
 
-        <NavLink to="/" className="w-10 h-10 shadow-md" >
-            <img src={logo} alt="logo" />
+        <NavLink to="/" className="flex w-7 h-7 shrink-0 sm:w-10 sm:h-10" >
+            <img src={logo} alt="logo" className="w-full h-full object-contain"/>
         </NavLink>
         
-        <nav className="flex text-lg gap-14 font-medium">
+        <nav className="flex gap-14 font-medium">
           <NavLink to="/about" className={({ isActive }) => isActive ? 'nav-link text-blue-100' : 'nav-link text-blue-300'}>
             About
           </NavLink>
