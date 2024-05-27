@@ -74,7 +74,6 @@ export default function Island({
   const handleKeyDown = (event) => {
     if (event.key === "ArrowLeft") {
       if (!isRotating) setIsRotating(true);
-
       islandRef.current.rotation.y += 0.010 * Math.PI;
       rotationSpeed.current = 0.007;
     } else if (event.key === "ArrowRight") {
