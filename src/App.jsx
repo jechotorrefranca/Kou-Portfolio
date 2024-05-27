@@ -2,6 +2,7 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom"
 import Navbar from "./components/Navbar"
 import { Home, About, Projects, Contact, Login } from "./pages"
 import React from 'react';
+import Messages from "./pages/Messages";
 
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
             <Route path="/projects" element={<Projects/>} />
             <Route path="/contact" element={<Contact/>} />
             <Route path="/login" element={<Login/>} />
+            <Route path="/messages" element={<Messages/>} />
           </Routes>
       </Router>
 

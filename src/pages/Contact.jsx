@@ -28,6 +28,8 @@ const Contact = () => {
     e.preventDefault();
     setIsLoading(true);
     setCurrentAnimation('AnimalArmature|Gallop_Jump');
+
+    
   
     try {
 
@@ -75,6 +77,7 @@ const Contact = () => {
         name: form.name,
         email: form.email,
         message: form.message,
+        timestamp: new Date(),
         isRead: false });
     } catch (error) {
 
