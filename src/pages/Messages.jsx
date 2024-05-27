@@ -87,7 +87,7 @@ const Messages = () => {
                                       </div>
 
                                 </div>
-                                <div className='ml-8 font-sans font-semibold bg-slate-100 p-2 rounded-sm h-[100px] overflow-scroll'>
+                                <div className='ml-6 font-sans font-semibold bg-slate-100 p-2 rounded-sm h-[100px] overflow-scroll'>
                                   <p>{msg.message}</p>
                                 </div>
                               </div>

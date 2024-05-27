@@ -97,7 +97,7 @@ const Navbar = () => {
 
 
       <nav className="flex gap-5 sm:gap-14 font-medium items-center">
-        {hasUnreadMessages && (
+        {hasUnreadMessages &&  user && (
           <Link to="/messages" className=''>
             <FontAwesomeIcon icon={faMessage} color='#ff4d4d' className="size-7 mt-1"/>
           </Link>
