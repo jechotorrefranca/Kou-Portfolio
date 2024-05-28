@@ -52,7 +52,7 @@ const Messages = () => {
   return (
     <section className='max-container h-full'>
       <div className=''>
-        <div className='bg-black-500 h-[85vh] rounded-xl'>
+        <div className='bg-black-500 pb-6 rounded-xl h-fit'>
           <div className='flex justify-center items-center'>
             <p className='font-cocogoose p-10 absolute mt-[75px] text-[40px] text-blue-300'>MESSAGES</p>
           </div>

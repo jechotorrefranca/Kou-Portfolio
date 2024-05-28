@@ -214,7 +214,9 @@ body:has(.card[data-color="green"]:hover) {
   border-radius: 5px;
 }
 
-
+body {
+  background-color: #00060c;
+}
 
 
 .block-container:hover > .btn-back {
